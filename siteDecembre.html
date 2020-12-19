@@ -1,23 +1,23 @@
+//données du tableau provenant de https://remywiki.com/CS_pnm_Lively //
 <html>
 	<head>
-	<link rel="stylesheet" href="siteDecembre.css">
-	<script type="text/javascript" src="siteDecembre.js"></script>
+	<link rel="stylesheet" href="css/siteDecembre.css">
+	<script type="text/javascript" src="js/siteDecembre.js"></script>
 	</head>
-	<body onload="Onload">
-		<form id="formchoix" >
+	<body>
+		<form id="formchoix">
 			<label for="ArTitle">titre/artiste name:</label>
-			<input name="ArTitle" type="text"><br>
+			<input name="ArTitle" type="text"><input  id="rechercher" type="button" value="rechercher" onclick="TrierTableText()"><br>
 			<label for="choibpmBas">bmp compris entre:</label>
-			<input id="choibpmBas" name="bpmBas" type="text">
+			<input id="choibpmBas" name="bpmBas" type="text" minlength="3">
 			<label for="choibpmHaut">et:</label>
-			<input id="choibpmHaut" name="bpmHaut" type="text"><br>
+			<input id="choibpmHaut" name="bpmHaut" type="text"><input  id="rechercher" type="button" value="rechercher" onclick="TrierTableBpm()"><br>
 			<label for="choidifficultée">difficultée de :</label>
-			<input id="choidifficultée" name="choidifficultée" type="number" min="1" max="50"><br>
-			<input  id="rechercher" type="button" value="rechercher" onclick="TrierTable">
+			<input id="choidifficultée" name="choidifficultée" type="number" min="1" max="50">
+			<input  id="rechercher" type="button" value="rechercher" onclick="TrierTableDiff()">
 			
 		</form>
-		
-		<table id="Tablesongs" >
+		<table id="Tablesongs">
 			<thead id="colonnes">
 				<tr>
 					<th rowspan="2">Titre</th>
@@ -26,10 +26,10 @@
 					<th colspan="4">difficultées</th>
 				</tr>
 				<tr class="diffs">
-					<th>Easy</th>
-					<th>normal</th>
-					<th>hyper</th>
-					<th>EX</th>
+					<th class="ez">Easy</th>
+					<th class="normal">normal</th>
+					<th class="hyper">hyper</th>
+					<th class="EX">EX</th>
 				</tr>
 			</thead>
 			<tbody>
