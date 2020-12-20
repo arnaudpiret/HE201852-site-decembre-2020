@@ -1,23 +1,30 @@
-//données du tableau provenant de https://remywiki.com/CS_pnm_Lively //
 <html>
 	<head>
-	<link rel="stylesheet" href="css/siteDecembre.css">
-	<script type="text/javascript" src="js/siteDecembre.js"></script>
+		<link rel="stylesheet" href="css/siteDecembre.css">
+		<script type="text/javascript" src="js/siteDecembre.js"></script>
+
 	</head>
 	<body>
+		<img id="popn10" src="images/pop'n10.jpg" onclick="tripopn10()">
+		<img id= "popnliv"src="images/pop'n lively baniere.jpg"onclick="fulltable()">
+		<img id="popn11" src="images/popn11.jpg"onclick="tripopn11()">
+		
 		<form id="formchoix">
-			<label for="ArTitle">titre/artiste name:</label>
-			<input name="ArTitle" type="text"><input  id="rechercher" type="button" value="rechercher" onclick="TrierTableText()"><br>
-			<label for="choibpmBas">bmp compris entre:</label>
+			<label for="ArTitle">-titre/artiste name:  </label>
+			<input id="choitext" name="ArTitle" type="text">
+			<input type="button" value="trier (par nom d'artiste/de titre)" onclick="TrierTableText()"><br>
+			<label for="choibpmBas">-bmp compris entre (min):  </label>
 			<input id="choibpmBas" name="bpmBas" type="text" minlength="3">
-			<label for="choibpmHaut">et:</label>
-			<input id="choibpmHaut" name="bpmHaut" type="text"><input  id="rechercher" type="button" value="rechercher" onclick="TrierTableBpm()"><br>
-			<label for="choidifficultée">difficultée de :</label>
+			<label for="choibpmHaut">et(max):</label>
+			<input id="choibpmHaut" name="bpmHaut" type="text">
+			<input type="button" value="trier (par bpm)" onclick="TrierTableBpm()"><br>
+			<label for="choidifficultée">-difficultée de :  </label>
 			<input id="choidifficultée" name="choidifficultée" type="number" min="1" max="50">
-			<input  id="rechercher" type="button" value="rechercher" onclick="TrierTableDiff()">
-			
+			<input type="button" value="trier (par difficultée)" onclick="TrierTableDiff()"><br>
+			-<input type="button" value="afficher le tableau complet" onclick="fulltable()">
 		</form>
-		<table id="Tablesongs">
+		
+        <table id="Tablesongs">
 			<thead id="colonnes">
 				<tr>
 					<th rowspan="2">Titre</th>
@@ -33,9 +40,6 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="titrejeux">
-					<th colspan="7">pop'n musique</th>
-				</tr>
 				<tr class="1">
 					<td>I REALLY WANT TO HURT YOU</td>
 					<td>SUGI &amp; REO</td>
@@ -81,9 +85,6 @@
 					<td class="hyper">29</td>
 					<td class="EX">-</td>
 				</tr>
-				<tr  class="titrejeux">
-					<th colspan="7">pop'n musique 2</th>
-				</tr>
 				<tr class="2">
 					<td>WHITE BIRDS</td>
 					<td>violent age</td>
@@ -103,21 +104,17 @@
 					<td class="EX">-</td>
 				</tr>
 				<tr class="2">
-					<td><a href="/Cherry%26Raquel" title="Cherry&amp;Raquel">Cherry&amp;Raquel</a></td>
-					<td><a href="/Hiroshi_Takeyasu" title="Hiroshi Takeyasu">The Ebisu Singers</a></td>
+					<td>Cherry&amp;Raquel</td>
+					<td>The Ebisu Singers</td>
 					<td class="bpm">163</td>
 					<td class="ez">-</td>
 					<td class="normal">17</td>
 					<td class="hyper">-</td>
 					<td class="EX">-</td>
 				</tr>
-
-				<tr class="titrejeux">
-					<th  colspan="7">pop'n music 3</th>
-				</tr>
 				<tr class="3">
-					<td><a href="/Take_me_to..." title="Take me to...">Take me to...</a></td>
-					<td><a href="/Sanae_Shintani" title="Sanae Shintani">Sana</a></td>
+					<td>Take me to...</td>
+					<td>Sana</td>
 					<td class="bpm">108</td>
 					<td class="ez">-</td>
 					<td class="normal">16</td>
@@ -126,8 +123,8 @@
 				</tr>
 
 				<tr class="3">
-					<td><a href="/Little_Robin%27s_Drawer" title="Little Robin's Drawer">Little Robin's Drawer</a></td>
-					<td><a href="/Masashi_Honma" title="Masashi Honma">Uncle Motchee</a></td>
+					<td>Little Robin's Drawer</td>
+					<td>Uncle Motchee</td>
 					<td class="bpm">120</td>
 					<td class="ez">-</td>
 					<td class="normal">14</td>
@@ -136,8 +133,8 @@
 				</tr>
 
 				<tr class="3">
-					<td><a href="/LET_ME_FEEL_SO_HIGH" title="LET ME FEEL SO HIGH">LET ME FEEL SO HIGH</a></td>
-					<td><a href="/LITTLE_CURE" title="LITTLE CURE">Little Bitch.K2</a></td>
+					<td>LET ME FEEL SO HIGH</td>
+					<td>Little Bitch.K2</td>
 					<td class="bpm">160</td>
 					<td class="ez">-</td>
 					<td class="normal">20</td>
@@ -146,32 +143,28 @@
 				</tr>
 
 				<tr class="3">
-					<td><a href="/8gatsu_no_sayonara" title="8gatsu no sayonara">8月のサヨナラ</a></td>
-					<td><a href="/Sanae_Shintani" title="Sanae Shintani">aprésmidi</a></td>
+					<td>8月のサヨナラ</td>
+					<td>aprésmidi</td>
 					<td class="bpm">108</td>
 					<td class="ez">-</td>
 					<td class="normal">21</td>
 					<td class="hyper">33</td>
 					<td class="EX">41</td>
-					</tr>
-				<tr>
+				</tr>
 
-				<tr  class="titrejeux">
-					<th colspan="7">pop'n music 10
-					</th></tr>
 				<tr class="10">
-					<td><a href="/SCI-FI" title="SCI-FI">SCI-FI</a></td>
-					<td><a href="/Kiyoshi_Murai" title="Kiyoshi Murai">SEIYA + A.I.units</a></td>
+					<td>SCI-FI</td>
+					<td>SEIYA + A.I.units</td>
 					<td class="bpm">160</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
 					<td class="hyper">33</td>
 					<td class="EX">39</td>
-				</tr >
+				</tr>
 
 				<tr class="10">
-					<td><a href="/STATION" title="STATION">STATION</a></td>
-					<td><a href="/Harumi_Ueko" title="Harumi Ueko">Jimmy Weckl</a> feat. 岩志太郎</td>
+					<td>STATION</td>
+					<td>Jimmy Weckl feat. 岩志太郎</td>
 					<td class="bpm">117</td>
 					<td class="ez">-</td>
 					<td class="normal">18</td>
@@ -180,8 +173,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Missing_Cat" title="Missing Cat">Missing Cat</a></td>
-					<td><a href="/Yasushi_Sakurai" title="Yasushi Sakurai">SAKURAI yasushi</a> feat. KUDO</td>
+					<td>Missing Cat</td>
+					<td>SAKURAI yasushi feat. KUDO</td>
 					<td class="bpm">135</td>
 					<td class="ez">-</td>
 					<td class="normal">21</td>
@@ -190,8 +183,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Mahouteki_shinteigi" title="Mahouteki shinteigi">魔法的新定義</a></td>
-					<td><a href="/Shunsuke_Kida" title="Shunsuke Kida">うらら</a></td>
+					<td>魔法的新定義</td>
+					<td>うらら</td>
 					<td class="bpm">153</td>
 					<td class="ez">-</td>
 					<td class="normal">24</td>
@@ -200,8 +193,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/CUT_OFF_A_CORNER" title="CUT OFF A CORNER">CUT OFF A CORNER</a></td>
-					<td><a href="/Shunsuke_Kida" title="Shunsuke Kida">LOVE AND ZEST</a></td>
+					<td>CUT OFF A CORNER</td>
+					<td>LOVE AND ZEST</td>
 					<td class="bpm">194</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -210,8 +203,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Disable_dA_STACK" title="Disable dA STACK">disable dA STACK</a></td>
-					<td><a href="/Osamu_Migitera" title="Osamu Migitera">D-crew</a></td>
+					<td>disable dA STACK</td>
+					<td>D-crew</td>
 					<td class="bpm">185</td>
 					<td class="ez">-</td>
 					<td class="normal">31</td>
@@ -220,8 +213,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/THE_PLACE_TO_BE" title="THE PLACE TO BE">THE PLACE TO BE</a></td>
-					<td><a href="/Osamu_Migitera" title="Osamu Migitera">Des-ROW</a> feat.<a href="/MAKOTO" title="MAKOTO">真言</a></td>
+					<td>THE PLACE TO BE</td>
+					<td>Des-ROWfeat.真言</td>
 					<td class="bpm">222</td>
 					<td class="ez">-</td>
 					<td class="normal">23</td>
@@ -230,8 +223,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Atlantic_Spotted_Dolphin" title="Atlantic Spotted Dolphin">Atlantic Spotted Dolphin</a></td>
-					<td><a href="/Hiroki_Koga" title="Hiroki Koga">Blue &amp; Green</a></td>
+					<td>Atlantic Spotted Dolphin</td>
+					<td>Blue &amp; Green</td>
 					<td class="bpm">192</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -240,8 +233,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/SUMMER_TIME" title="SUMMER TIME">SUMMER TIME</a></td>
-					<td><a href="/Takehiko_Fujii" title="Takehiko Fujii">shinpei</a></td>
+					<td>SUMMER TIME</td>
+					<td>shinpei</td>
 					<td class="bpm">100</td>
 					<td class="ez">-</td>
 					<td class="normal">20</td>
@@ -250,8 +243,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Raspberry_Heart" title="Raspberry Heart">Raspberry♡Heart</a></td>
-					<td><a href="/Junko_Karashima" title="Junko Karashima">jun</a></td>
+					<td>Raspberry♡Heart</td>
+					<td>jun</td>
 					<td class="bpm">160</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -260,18 +253,17 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/PolePole_no_amagoi_no_uta" title="PolePole no amagoi no uta">ポレポレの雨乞いの唄</a></td>
-					<td><a href="/Yuki_Kume" title="Yuki Kume">Q-Mex</a></td>
+					<td>ポレポレの雨乞いの唄</td>
+					<td>Q-Mex</td>
 					<td class="bpm">118</td>
 					<td class="ez">-</td>
 					<td class="normal">21</td>
 					<td class="hyper">31</td>
 					<td class="EX">37</td>
-				</tr >
-
-					<tr>
-					<td><a href="/Love_accordion" title="Love accordion">ラブ・アコーディオン</a></td>
-					<td><a href="/Kiyoshi_Murai" title="Kiyoshi Murai">WORLD SEQUENCE</a> plays <a href="/Tomoaki_Hirono" title="Tomoaki Hirono">"mon cheri H.T."</a></td>
+				</tr>
+					<tr class="10">
+					<td>ラブ・アコーディオン</td>
+					<td>WORLD SEQUENCE plays "mon cheri H.T."</td>
 					<td class="bpm">186</td>
 					<td class="ez">-</td>
 					<td class="normal">25</td>
@@ -280,8 +272,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/HOLiDAY" title="HOLiDAY">HOLiDAY</a></td>
-					<td><a href="/Kozo_Nakamura" title="Kozo Nakamura">らく楽器隊2003</a></td>
+					<td>HOLiDAY</td>
+					<td>らく楽器隊2003</td>
 					<td class="bpm">184</td>
 					<td class="ez">-</td>
 					<td class="normal">20</td>
@@ -290,8 +282,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Texas_no_gunman" title="Texas no gunman">テキサスのガンマン</a></td>
-					<td><a href="/Tomoaki_Hirono" title="Tomoaki Hirono">Sludgy Hawks</a> with <a href="/Hiroki_Koga" title="Hiroki Koga">N</a></td>
+					<td>テキサスのガンマン</td>
+					<td>Sludgy Hawks with "N"</td>
 					<td class="bpm">140</td>
 					<td class="ez">-</td>
 					<td class="normal">25</td>
@@ -300,18 +292,17 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Troika_dance" title="Troika dance">トロイカダンス</a></td>
-					<td><a href="/Yuki_Kume" title="Yuki Kume">Q-Mex</a> plays "<a href="/Tomoaki_Hirono" title="Tomoaki Hirono">Hirotees</a>"</td>
+					<td>トロイカダンス</td>
+					<td>Q-Mex plays "Hirotees"</td>
 					<td class="bpm">119</td>
 					<td class="ez">-</td>
 					<td class="normal">20</td>
 					<td class="hyper">30</td>
-					<td class="EX">36</td>>
-				</tr>
+					<td class="EX">36</td></tr>
 
 				<tr class="10">
-					<td><a href="/Kieta!%3F_Napoleon" title="Kieta!? Napoleon">きえた!? ナポレオン</a></td>
-					<td><a href="/Hiroki_Koga" title="Hiroki Koga">ナヤ〜ン団</a></td>
+					<td>きえた!? ナポレオン</td>
+					<td>ナヤ〜ン団</td>
 					<td class="bpm">212</td>
 					<td class="ez">-</td>
 					<td class="normal">23</td>
@@ -320,8 +311,8 @@
 				</tr>
 
 				<tr class="10">
-					<td><a href="/Dandelion" title="Dandelion">dandelion</a></td>
-					<td><a href="/Sotaro_Tojima" title="Sotaro Tojima">sotaro</a></td>
+					<td>dandelion</td>
+					<td>sotaro</td>
 					<td class="bpm">24-102</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -329,13 +320,9 @@
 					<td class="EX">-</td>
 				</tr>
 
-				<tr  class="titrejeux">
-					<th colspan="7">pop'n music 11
-					</th>
-				</tr>
 				<tr class="11">
-					<td><a href="/Demolizione" title="Demolizione">demolizione</a></td>
-					<td><a href="/Hiroki_Koga" title="Hiroki Koga">ensemble futuro</a></td>
+					<td>demolizione</td>
+					<td>ensemble futuro</td>
 					<td class="bpm">160</td>
 					<td class="ez">-</td>
 					<td class="normal">24</td>
@@ -344,9 +331,9 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/MY_GIFTS" title="MY GIFTS">MY GIFTS</a></td>
-					<td class="bpm"><a href="/Osamu_Migitera" title="Osamu Migitera">D-crew</a></td>
-					<td>185</td>
+					<td>MY GIFTS</td>
+					<td>D-crew</td>
+					<td class="bpm">185</td>
 					<td class="ez">-</td>
 					<td class="normal">30</td>
 					<td class="hyper">41</td>
@@ -354,8 +341,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/The_keel" title="The keel">the keel</a></td>
-					<td><a href="/Akino_Mizuno" title="Akino Mizuno">Akino</a></td>
+					<td>the keel</td>
+					<td>Akino</td>
 					<td class="bpm">133</td>
 					<td class="ez">-</td>
 					<td class="normal">21</td>
@@ -364,8 +351,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Saikyou_obachan_densetsu" title="Saikyou obachan densetsu">最強おばちゃん伝説</a></td>
-					<td><a href="/Harumi_Ueko" title="Harumi Ueko">Jimmy Weckl</a> feat. ジュース・アクターズ</td>
+					<td>最強おばちゃん伝説</td>
+					<td>Jimmy Weckl feat. ジュース・アクターズ</td>
 					<td class="bpm">78-156</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -374,8 +361,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/E-TEN-RAKU" title="E-TEN-RAKU">E-TEN-RAKU</a></td>
-					<td><a href="/Yuki_Kume" title="Yuki Kume">Q-Mex</a></td>
+					<td>E-TEN-RAKU</td>
+					<td>Q-Mex</td>
 					<td class="bpm">125</td>
 					<td class="ez">-</td>
 					<td class="normal">26</td>
@@ -384,8 +371,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Yanagi_kouji_no_sister" title="Yanagi kouji no sister">柳小路のシスター</a></td>
-					<td><a href="/Megumi_Oka" title="Megumi Oka">Shine</a> <a href="/Hiroyuki_Togo" title="Hiroyuki Togo">All Stars</a></td>
+					<td>柳小路のシスター</td>
+					<td>Shine , All Stars</td>
 					<td class="bpm">90-114</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -394,8 +381,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/AUSLANDSGESPRACH" title="AUSLANDSGESPRACH">AUSLANDSGESPRACH</a></td>
-					<td><a href="/Kiyoshi_Murai" title="Kiyoshi Murai">V.C.O.</a></td>
+					<td>AUSLANDSGESPRACH</td>
+					<td>V.C.O.</td>
 					<td class="bpm">130</td>
 					<td class="ez">-</td>
 					<td class="normal">23</td>
@@ -404,8 +391,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Space_Dog" title="Space Dog">Space Dog</a></td>
-					<td><a href="/Sanae_Shintani" title="Sanae Shintani">Sana</a></td>
+					<td>Space Dog</td>
+					<td>Sana</td>
 					<td class="bpm">113</td>
 					<td class="ez">11</td>
 					<td class="normal">25</td>
@@ -414,18 +401,17 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Nick_RING" title="Nick RING">Nick RING</a></td>
-					<td><a href="/NICK_BOYS" title="NICK BOYS">NICK BOYS</a></td>
-					<td class="bpm">80-160</td>
-					<<td class="ez">-</td>
+					<td>Nick RING</td>
+					<td>NICK BOYS</td>
+					<td class="bpm">80-160</td><td class="ez">-</td>
 					<td class="normal">23</td>
 					<td class="hyper">39</td>
 					<td class="EX">43</td>
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Boku_no_hikouki" title="Boku no hikouki">僕の飛行機</a></td>
-					<td><a href="/Jun_Wakita" title="Jun Wakita">宮永やよい</a></td>
+					<td>僕の飛行機</td>
+					<td>宮永やよい</td>
 					<td class="bpm">142</td>
 					<td class="ez">-</td>
 					<td class="normal">22</td>
@@ -434,8 +420,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Orange_AIR-LINE" title="Orange AIR-LINE">Orange AIR-LINE</a></td>
-					<td><a href="/Tomosuke_Funaki" title="Tomosuke Funaki">Orange</a> <a href="/Shizue_Tokui" title="Shizue Tokui">Lounge</a></td>
+					<td>Orange AIR-LINE</td>
+					<td>Orange,Lounge</td>
 					<td class="bpm">155</td>
 					<td class="ez">-</td>
 					<td class="normal">20</td>
@@ -444,8 +430,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Frost" title="Frost">frost</a></td>
-					<td><a href="/Megumi_Oka" title="Megumi Oka">めぐみ</a></td>
+					<td>frost</td>
+					<td>めぐみ</td>
 					<td class="bpm">152</td>
 					<td class="ez">-</td>
 					<td class="normal">24</td>
@@ -454,8 +440,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/Dengana_Mangana" title="Dengana Mangana">でんがなマンガナ</a></td>
-					<td><a href="/Harumi_Ueko" title="Harumi Ueko">でんがな&amp;マンガナ</a></td>
+					<td>でんがなマンガナ</td>
+					<td>でんがな&amp;マンガナ</td>
 					<td class="bpm">162</td>
 					<td class="ez">-</td>
 					<td class="normal">24</td>
@@ -464,8 +450,8 @@
 				</tr>
 
 				<tr class="11">
-					<td><a href="/D-groove_REQ" title="D-groove REQ">D-groove REQ</a></td>
-					<td><a href="/Osamu_Migitera" title="Osamu Migitera">D-crew</a></td>
+					<td>D-groove REQ</td>
+					<td>D-crew</td>
 					<td class="bpm">85-224</td>
 					<td class="ez">-</td>
 					<td class="normal">21</td>
@@ -473,13 +459,9 @@
 					<td class="EX">42</td>
 				</tr>
 
-				<tr  class="titrejeux">
-					<th  colspan="7">pop'n music 12 いろは
-					</th>
-				</tr>
 				<tr class="12">
-					<td><a href="/MY" title="MY">MY</a></td>
-					<td><a href="/Yoshitaka_Nishimura" title="Yoshitaka Nishimura">よしくん</a>と<a href="/Yoko_Aramaki" title="Yoko Aramaki">荒牧陽子さん</a></td>
+					<td></td>
+					<td>よしくん , &gt;荒牧陽子さん</td>
 					<td class="bpm">85-170</td>
 					<td class="ez">-</td>
 					<td class="normal">28</td>
@@ -488,8 +470,8 @@
 				</tr>
 
 				<tr class="12">
-					<td><a href="/Just_you_wait!" title="Just you wait!">Just you wait！</a></td>
-					<td><a href="/Tomonori_Ikeda" title="Tomonori Ikeda">heap</a></td>
+					<td>Just you wait！</td>
+					<td>heap</td>
 					<td class="bpm">130</td>
 					<td class="ez">-</td>
 					<td class="normal">23</td>
@@ -498,8 +480,8 @@
 				</tr>
 
 				<tr class="12">
-					<td><a href="/Ran" title="Ran">乱</a></td>
-					<td><a href="/Kiyoshi_Murai" title="Kiyoshi Murai">V.C.O.</a></td>
+					<td>乱</td>
+					<td>V.C.O.</td>
 					<td class="bpm">151</td>
 					<td class="ez">-</td>
 					<td class="normal">27</td>
@@ -508,8 +490,8 @@
 				</tr>
 
 				<tr class="12">
-					<td><a href="/Ryusei_Honey" title="Ryusei Honey">流星☆ハニー</a></td>
-					<td><a href="/Sanae_Shintani" title="Sanae Shintani">新谷</a><a href="/Akira_Yamaoka" title="Akira Yamaoka">あきら</a></td>
+					<td>流星☆ハニー</td>
+					<td>新谷 ,あきら</td>
 					<td class="bpm">148</td>
 					<td class="ez">-</td>
 					<td class="normal">23</td>
@@ -518,8 +500,8 @@
 				</tr>
 
 				<tr class="12">
-					<td><a href="/Futari_no_manifesto" title="Futari no manifesto">ふたりのマニフェスト</a></td>
-					<td><a href="/Yoshihiko_Koezuka" title="Yoshihiko Koezuka">肥塚良彦</a></td>
+					<td>ふたりのマニフェスト</td>
+					<td>肥塚良彦</td>
 					<td class="bpm">148</td>
 					<td class="ez">-</td>
 					<td class="normal">21</td>
@@ -620,4 +602,5 @@
 			</tbody>
 		</table>
 	</body>
+	<footer> liste non exhaustive des songs disponible dans le jeu pop'n music ( donées du tableau trouvés sur https://remywiki.com/CS_pnm_Lively)</footer>
 </html>
