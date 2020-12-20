@@ -57,13 +57,13 @@ function fulltable(){
 
 function tripopn11(){
 	document.getElementById("Tablesongs").innerHTML ="<thead id=\"colonnes\"><tr><th rowspan=\"2\">Titre</th><th rowspan=\"2\">artist</th><th rowspan=\"2\">BPM</th><th colspan=\"4\">difficultées</th></tr><tr class=\"diffs\"><th class=\"ez\">Easy</th><th class=\"normal\">normal</th><th class=\"hyper\">hyper</th><th class=\"EX\">EX</th></tr></thead><tbody><tr class=\"titrejeux\"><th colspan=\"7\">pop'n music 11 いろは</th></tr>"
-	for(let i=86 ;i<202; i+=7){ 
+	for(let i=87 ;i<202; i+=7){ 
 			document.getElementById("Tablesongs").innerHTML+="<tr><td>"+TD_LIST[i-3].innerHTML+"</td><td>"+TD_LIST[i-2].innerHTML+"</td><td class=\"bpm\">"+TD_LIST[i-1].innerHTML+"</td><td class=\"ez\">"+TD_LIST[i].innerHTML+"</td><td class=\"normal\">"+TD_LIST[i+1].innerHTML+"</td><td class=\"hyper\">"+TD_LIST[i+2].innerHTML+"</td><td class=\"EX\">"+TD_LIST[i+3].innerHTML+"</td></tr>"		
 	}
 }
 function tripopn10(){
 	document.getElementById("Tablesongs").innerHTML ="<thead id=\"colonnes\"><tr><th rowspan=\"2\">Titre</th><th rowspan=\"2\">artist</th><th rowspan=\"2\">BPM</th><th colspan=\"4\">difficultées</th></tr><tr class=\"diffs\"><th class=\"ez\">Easy</th><th class=\"normal\">normal</th><th class=\"hyper\">hyper</th><th class=\"EX\">EX</th></tr></thead><tbody><tr class=\"titrejeux\"><th colspan=\"7\">pop'n music 10 いろは</th></tr>"
-	for(let i=205 ;i<300; i+=7){ 
+	for(let i=206 ;i<300; i+=7){ 
 			document.getElementById("Tablesongs").innerHTML+="<tr><td>"+TD_LIST[i-3].innerHTML+"</td><td>"+TD_LIST[i-2].innerHTML+"</td><td class=\"bpm\">"+TD_LIST[i-1].innerHTML+"</td><td class=\"ez\">"+TD_LIST[i].innerHTML+"</td><td class=\"normal\">"+TD_LIST[i+1].innerHTML+"</td><td class=\"hyper\">"+TD_LIST[i+2].innerHTML+"</td><td class=\"EX\">"+TD_LIST[i+3].innerHTML+"</td></tr>"		
 	}
 }
